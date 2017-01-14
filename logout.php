@@ -1,0 +1,10 @@
+<?php
+session_start();
+if($_SESSION['sid1']==session_id())
+{
+session_unset();
+session_destroy();
+$_SESSION['sid1']=1234;
+header("location:login.html");
+}
+?>
